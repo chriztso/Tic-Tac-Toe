@@ -23,13 +23,40 @@ function playTurn(number){
         console.log(typeof(result.number) , result.number);
         var num = result.number;
         spots[num] = '1';
-        console.log(spots);
+        checker(spots);
          console.log(spots[1] + ' | ' + spots[2] + ' | ' + spots[3] + '\n' + '---------' + '\n'   
          +  spots[4] + ' | ' + spots[5] + ' | ' + spots[6] + '\n' + '---------' + '\n'
          + spots[7] + ' | ' + spots[8] + ' | ' + spots[9] + '\n');
          playTurn();
     });
     
+}
+
+function checker(object){
+    if(object[1] === '1' && object[2] === '1' && object[3] === '1'){
+        console.log('WINNER');
+    }
+    if(object[4] === '1' && object[5] === '1' && object[6] === '1'){
+        console.log('WINNER');
+    }
+    if(object[7] === '1' && object[8] === '1' && object[9] === '1'){
+        console.log('WINNER');
+    }
+    if(object[1] === '1' && object[4] === '1' && object[7] === '1'){
+        console.log('WINNER');
+    }
+    if(object[2] === '1' && object[5] === '1' && object[8] === '1'){
+        console.log('WINNER');
+    }
+    if(object[3] === '1' && object[6] === '1' && object[9] === '1'){
+        console.log('WINNER');
+    }
+    if(object[1] === '1' && object[5] === '1' && object[9] === '1'){
+        console.log('WINNER');
+    }
+    if(object[3] === '1' && object[5] === '1' && object[7] === '1'){
+        console.log('WINNER');
+    }
 }
 
 
